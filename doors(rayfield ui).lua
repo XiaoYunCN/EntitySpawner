@@ -15,12 +15,12 @@ pcl.Enabled = false
 
 local Window = Rayfield:CreateWindow({
 	Name = "DOORS Script",
-	LoadingTitle = "psst",
-	LoadingSubtitle = "by SindubsMini",
+	LoadingTitle = "psssaiudt",
+	LoadingSubtitle = "by Zylex",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
-		FileName = "SindubsMiniScripts"
+		FileName = "ZYlex"
 	},
 	KeySystem = false, -- Set this to true to use our key system
 })
