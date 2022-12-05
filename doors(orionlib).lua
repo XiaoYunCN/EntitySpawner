@@ -4463,6 +4463,13 @@ itemsTab:AddButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
     end
 })
+				
+itemsTab:AddButton({
+    Name = "Give M4A1 Lel",
+    Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EntitySpawnr/main/M4A1.lua"))()
+    end
+})
 
 local PlayerTab = Window:MakeTab({
     Name = "Player",
