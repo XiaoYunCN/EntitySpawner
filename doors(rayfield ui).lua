@@ -4151,28 +4151,7 @@ itemsTab:CreateParagraph({Title = "Warning!", Content = "Only works on entites s
 itemsTab:CreateButton({
     Name = "Give Crucifix",
     Callback = function ()
---[[        local shadow=game:GetObjects("rbxassetid://11480603603")[1]
-        shadow.Parent = game.Players.LocalPlayer.Backpack
-        local anim = Instance.new("Animation")
-        anim.AnimationId = 'https://www.roblox.com/Assest?ID=9982615727'
-        local track
-         
-        shadow.Equipped:Connect(function()
-            track = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim) 
-                track.Priority = Enum.AnimationPriority.Action
-                track:Play()
-                track.Looped = true
-         
-        end)
-         
-        shadow.Unequipped:Connect(function()
-            if track then
-                track:Stop()
-            end
-        end)
-            end,
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Johnny39871/assets/main/crucifixo"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/Utilities-1/main/Crucifix"))()
         end
 })
 
