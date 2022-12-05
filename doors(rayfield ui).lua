@@ -4263,6 +4263,13 @@ itemsTab:CreateButton({
     end
 })
 itemsTab:CreateButton({
+    Name = "Give M4A1",
+    Info = "kill insetcs",
+    Callback = function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/EntitySpawner/main/M4A1.lua"))()
+end
+})
+itemsTab:CreateButton({
     Name = "Crucifix Itemshop",
     Info = "aokasodk",
     Callback = function ()
