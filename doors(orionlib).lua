@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Doors脚本汉化版作者小云☁️", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
+local Window = OrionLib:MakeWindow({Name = "Doors汉化小云☁️", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
