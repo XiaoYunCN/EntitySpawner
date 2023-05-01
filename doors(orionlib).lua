@@ -4467,18 +4467,18 @@ PlayerTab:AddButton({
     end
 })
 
-PlayerTab:AddSlider({
-    Name = "步行速度",
-    Min = 0, 
-    Max = 200,
-    Increment = 1,
-    Default = 16,
-    Color = Color3.fromRGB(255,255,255),
-    CurrentValue = 5,
-    ValueName = "",
-    Callback = function(Value)
-        TargetWalkspeed = Value
-    end
+Tab:AddTextbox({
+
+	Name = "移动速度设置",	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end
+
 })
 
 
