@@ -1613,7 +1613,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Freddy Fazbear",
+    Name = "产卵弗雷迪·法兹贝尔",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1707,7 +1707,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Greed",
+    Name = "滋生贪婪",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1801,7 +1801,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Greed RF",
+    Name = "产卵贪婪射频",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1895,7 +1895,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Happy Muchi",
+    Name = "产卵快乐Muchi",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1989,7 +1989,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Hehehehaw",
+    Name = "产卵呵呵呵",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2177,7 +2177,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn LSPLASH",
+    Name = "卵 LSPLASH",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2271,7 +2271,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Movong Eyes",
+    Name = "产生移动的眼睛",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2459,7 +2459,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Old Ambush",
+    Name = "产卵变老 Ambush",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2553,7 +2553,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Orange",
+    Name = "产卵橙色",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2647,7 +2647,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Peter Griffin",
+    Name = "产卵彼得格里芬",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2741,7 +2741,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Pikachu",
+    Name = "产卵皮卡丘",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2835,7 +2835,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Sanic",
+    Name = "产卵Sanic",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2929,7 +2929,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Saul",
+    Name = "产卵索尔",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -3023,7 +3023,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Wise Mystical Tree",
+    Name = "繁殖智慧神秘之树",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -3212,7 +3212,7 @@ Creator.runEntity(entity)
 
 
 local everyTab = Window:MakeTab({
-    Name = "Entity Every Door",
+    Name = "实体每扇门",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
@@ -3220,7 +3220,7 @@ local everyTab = Window:MakeTab({
 everyTab:AddParagraph("Warning!","High performance required!")
 
 everyTab:AddButton({
-    Name = "Screech Every Door",
+    Name = "尖叫每 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3232,7 +3232,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Spawn Eyes Every Door",
+    Name = "产卵眼间隔 Door",
     Callback = function ()
 	    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local enableDamage = true
@@ -3321,7 +3321,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Jack Hallway Every Door",
+    Name = "杰克走廊每 Door",
     Callback = function ()
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
@@ -3339,7 +3339,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Halt Every Door",
+    Name = "停止每 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3351,7 +3351,7 @@ everyTab:AddButton({
 
 
 everyTab:AddButton({
-    Name = "Break Lights Every Door",
+    Name = "熄灯时间间隔 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
