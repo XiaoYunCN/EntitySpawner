@@ -3362,7 +3362,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Spawn Eyes Every Door",
+    Name = "产卵眼间隔 Door",
     Callback = function ()
 	    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local enableDamage = true
@@ -3450,7 +3450,7 @@ everyTab:AddButton({
             end,
         })
 everyTab:AddButton({
-    Name = "Flicker Lights Every Door",
+    Name = "闪烁灯间隔 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3462,7 +3462,7 @@ everyTab:AddButton({
 
 
 everyTab:AddButton({
-    Name = "Seek Eyes Every Door",
+    Name = "寻找眼睛每 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3473,7 +3473,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Heartbeat Minigame Every Door",
+    Name = "心跳迷你游戏每 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3484,7 +3484,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Red Room Every Door",
+    Name = "每个红色房间 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3498,7 +3498,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "A-60 Every Door",
+    Name = "A-60 每个 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3595,7 +3595,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "Rebound Every Door",
+    Name = "反弹间隔 Door",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3695,14 +3695,14 @@ everyTab:AddButton({
 
 
 local Tab = Window:MakeTab({
-    Name = "Spawn Entity",
+    Name = "衍生实体",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
 
 
 Tab:AddButton({
-    Name = "Spawn Screech",
+    Name = "产卵尖叫",
     Callback = function ()
         require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
     workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
@@ -3712,7 +3712,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-    Name = "Spawn Ambush",
+    Name = "卵 Ambush",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/Spawner_V2.lua"))()
         local Configuration = {
@@ -3726,7 +3726,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Spawn Ambush [Killable]",
+    Name = "产卵伏击[可杀死]",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/Spawner_V2.lua"))()
         local Configuration = {
@@ -3740,7 +3740,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Spawn Seek",
+    Name = "卵 Seek",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/EntitySpawner.lua"))()
         local Configuration = {}
@@ -3750,7 +3750,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Spawn Eyes",
+    Name = "卵 Eyes",
     Callback = function ()
         local enableDamage = false
         repenttimes = 0
@@ -3865,7 +3865,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-    Name = "Spawn Eyes [Killable]",
+    Name = "产卵眼[可杀死]",
     Callback = function ()
         local enableDamage = true
         repenttimes = 0
@@ -3981,7 +3981,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-    Name = "Spawn Halt",
+    Name = "产卵停止",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
@@ -3990,7 +3990,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Spawn Glitch",
+    Name = "产生毛刺",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
@@ -3999,7 +3999,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Spawn Rush",
+    Name = "产卵高峰",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -4095,7 +4095,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-    Name = "Spawn Rush [Killable]",
+    Name = "产卵拉什[可杀死]",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -4189,22 +4189,22 @@ Tab:AddButton({
 })
 
 local itemsTab = Window:MakeTab({
-    Name = "Items",
+    Name = "项目",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
-itemsTab:AddParagraph("Warning!","Only works on entites spawned by script!")
+itemsTab:AddParagraph("警告！","仅适用于由脚本生成的实体！")
 
 itemsTab:AddButton({
-    Name = "Give Crucifix",
+    Name = "给十字架",
     Callback = function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/Utilities-1/main/Crucifix"))()
         end
 })
 
 itemsTab:AddButton({
-    Name = "Give Skeleton Key",
+    Name = "给万能钥匙",
     Callback = function ()
         function skelly()
             local DoorReplication = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Door%20Replication/Source.lua"))()
@@ -4409,9 +4409,9 @@ function FullVersion() do
     local Achievements = debug.getupvalue(Unlock, 1)
     
     local custom = {
-        Title = "Unlock The Crucifix",
-        Desc = "How did you..",  --first line
-        Reason = "Somehow.. You Obtained the Crucifix..", --change this for second line of the badgs desc
+        Title = "打开十字架",
+        Desc = "你怎么..",  --first line
+        Reason = "以某种方式..你得到了十字架..", --change this for second line of the badgs desc
         BadgeId = 2127965910, --change badge id for image
         Category = 0,
     }
@@ -4437,21 +4437,21 @@ function FullVersion() do
 })
 
 itemsTab:AddButton({
-    Name = "Give Gun Lel",
+    Name = "给枪Lel",
     Callback = function ()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
     end
 })
 				
 itemsTab:AddButton({
-    Name = "Give M4A1 Lel",
+    Name = "给M4A1 Lel",
     Callback = function ()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EntitySpawnr/main/M4A1.lua"))()
     end
 })
 
 local PlayerTab = Window:MakeTab({
-    Name = "Player",
+    Name = "玩家",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -4468,7 +4468,7 @@ PlayerTab:AddButton({
 })
 
 PlayerTab:AddSlider({
-    Name = "WalkSpeed",
+    Name = "步行速度",
     Min = 0, 
     Max = 200,
     Increment = 1,
@@ -4492,20 +4492,20 @@ pcl.Enabled = false
 
 
 PlayerTab:AddToggle({
-	Name = "HeadLight",
+	Name = "前灯",
 	Default = false,
     Callback = function(Value)
         pcl.Enabled = Value
     end
 })
 local VisualsTab = Window:MakeTab({
-    Name = "Visuals",
+    Name = "画面",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 VisualsTab:AddButton({
-    Name = "Get All Achievements",
+    Name = "获得所有成就",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         for i,v in pairs(require(game.ReplicatedStorage.Achievements)) do
@@ -4563,7 +4563,7 @@ coroutine.resume(KeyCoroutine)
 
 local BookChams = {}
 VisualsTab:AddToggle({
-	Name = "Book Chams",
+	Name = "书店",
 	Default = false,
     Flag = "BookToggle",
     Save = true,
@@ -4576,7 +4576,7 @@ VisualsTab:AddToggle({
 
 local FigureChams = {}
 VisualsTab:AddToggle({
-	Name = "Figure Chams",
+	Name = "数字通道",
 	Default = false,
     Flag = "FigureToggle",
     Save = true,
@@ -4632,19 +4632,19 @@ local EntityCoroutine = coroutine.create(function()
 end)
 
 local GameTab = Window:MakeTab({
-    Name = "Game",
+    Name = "比赛",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 GameTab:AddToggle({
-	Name = "Instant Interact",
+	Name = "即时互动",
 	Default = false,
     Flag = "InstantToggle",
     Save = true
 })
 GameTab:AddButton({
-	Name = "Skip Door",
+	Name = "跳 Door",
 	Callback = function()
         pcall(function()
             local HasKey = false
@@ -4673,7 +4673,7 @@ GameTab:AddButton({
 })
 
 GameTab:AddToggle({
-	Name = "Auto skip door",
+	Name = "自动跳过 door",
 	Default = false,
     Save = false,
     Flag = "AutoSkip"
@@ -4713,7 +4713,7 @@ end)
 coroutine.resume(AutoSkipCoro)
 
 GameTab:AddButton({
-	Name = "No jumpscares",
+	Name = "没有惊吓",
 	Callback = function()
         pcall(function()
             game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
@@ -4721,45 +4721,45 @@ GameTab:AddButton({
   	end    
 })
 GameTab:AddToggle({
-	Name = "Avoid Rush/Ambush",
+	Name = "避免匆忙/伏击",
 	Default = false,
     Flag = "AvoidRushToggle",
     Save = true
 })
 GameTab:AddToggle({
-	Name = "No Screech",
+	Name = "没有尖叫",
 	Default = false,
     Flag = "ScreechToggle",
     Save = true
 })
 
 GameTab:AddToggle({
-	Name = "Always win heartbeat",
+	Name = "永远赢得心跳",
 	Default = false,
     Flag = "HeartbeatWin",
     Save = true
 })
 
 GameTab:AddToggle({
-	Name = "Predict chases",
+	Name = "预测追逐",
 	Default = false,
     Flag = "PredictToggle" ,
     Save = true
 })
 GameTab:AddToggle({
-	Name = "Notify when mob spawns",
+	Name = "当怪物出现时通知",
 	Default = false,
     Flag = "MobToggle" ,
     Save = true
 })
 GameTab:AddButton({
-	Name = "Complete breaker box minigame",
+	Name = "完整的断路器盒迷你游戏",
 	Callback = function()
         game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
   	end    
 })
 GameTab:AddButton({
-	Name = "Skip Door 50",
+	Name = "跳 Door 50",
 	Callback = function()
         local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
         game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
@@ -4891,7 +4891,7 @@ end)
 
 
 local ExtraTab = Window:MakeTab({
-    Name = "Extra",
+    Name = "额外的",
     Icon = "rbxassetid://7734042071",
     PremiumOnly = false
 })
@@ -4899,7 +4899,7 @@ local ExtraTab = Window:MakeTab({
 ExtraTab:AddParagraph("Warning!","these scripts are not mine!")
 
 ExtraTab:AddButton({
-    Name = "Break Lights",
+    Name = "打破灯",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "breakLights", workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value], 0.416, 60) 
@@ -4908,7 +4908,7 @@ ExtraTab:AddButton({
 
 
 ExtraTab:AddButton({
-    Name = "Flicker Lights",
+    Name = "闪烁灯",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "flickerLights", game.ReplicatedStorage.GameData.LatestRoom.Value, 1) 
@@ -4917,7 +4917,7 @@ ExtraTab:AddButton({
 
 
 ExtraTab:AddButton({
-    Name = "Seek's Eyes",
+    Name = "Seek的眼睛",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         require(game:GetService("ReplicatedStorage").ClientModules.EntityModules.Seek).tease(nil, workspace.CurrentRooms:WaitForChild(game.ReplicatedStorage.GameData.LatestRoom.Value), 14, 1665596753, true)
@@ -4926,7 +4926,7 @@ ExtraTab:AddButton({
 
 
 ExtraTab:AddButton({
-    Name = "Red Room",
+    Name = "红色房间",
     Callback = function ()
         local v1 = require(game.ReplicatedStorage.ClientModules.Module_Events)
         local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
@@ -4936,7 +4936,7 @@ ExtraTab:AddButton({
 })
 
 ExtraTab:AddButton({
-    Name = "Heartbeat Minigame",
+    Name = "心跳小游戏",
     Callback = function ()
         firesignal(game.ReplicatedStorage.Bricks.ClutchHeartbeat.OnClientEvent) 
     end
@@ -4944,7 +4944,7 @@ ExtraTab:AddButton({
 
 
 ExtraTab:AddButton({
-    Name = "Infinite Yield",
+    Name = "无限产量",
     Callback = function ()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source')))()
         
@@ -4952,7 +4952,7 @@ ExtraTab:AddButton({
 })
 
 ExtraTab:AddDropdown({
-    Name = "Next Room Actions",
+    Name = "下一个房间操作",
     Options = {"Hallway Jack","Shadow","Eyes"},
     CurretOption = "Input",
     Flag = "Dropdown1",
@@ -5097,7 +5097,7 @@ end
 })
 
 ExtraTab:AddButton({
-    Name = "Doors Speedrun Mode",
+    Name = "Doors 速度运行模式",
     Callback = function ()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/DoorsModes/DoorSpeedRun%20Mode'))()
     end
@@ -5108,10 +5108,10 @@ local InfoTab = Window:MakeTab({
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-InfoTab:AddParagraph("how can I be contacted","My Discord: ur, My Roblox Account: mom")
+InfoTab:AddParagraph("如何与我联系","我的不和:呃，我的机器人账号:妈妈")
 InfoTab:AddParagraph("Changelog","")
-InfoTab:AddParagraph("30.11.2022","1.Keybinds for EVERYTHING. 2. Deleted function spawn 100 screechs 3. Credits deleted 4. Update Log renamed to Info 5. Some changes in Extra. 6. Added function spawn ambush, seek.")
-InfoTab:AddParagraph("Soon...","this script will change the library from OrionLib to RayField (because it is outdated), within a week I will remake this script!!")
-InfoTab:AddParagraph("Bugs","1. Skeleton key doesn't exist at the moment 2. You're uncontrollably fast and its hard to get out of closets")
-InfoTab:AddParagraph("Notes","within 3 days I will supplement the timer, every door, keybinds tab, because there are a lot of custom entites")
+InfoTab:AddParagraph("30.11.2022","1.一切的按键绑定。2.删除功能产卵100尖叫3。演职员表已删除4。更新日志重命名为信息5。额外的一些变化。6.新增功能产卵伏击，寻找。")
+InfoTab:AddParagraph("Soon...","这个脚本会把库从OrionLib改成RayField(因为已经过时了)，一周之内我会重拍这个脚本！！")
+InfoTab:AddParagraph("Bugs","1.万能钥匙目前不存在。你的速度快得无法控制，很难走出壁橱")
+InfoTab:AddParagraph("关于","hebecause thee area lot fuom entites")
 OrionLib:Init()
