@@ -1,24 +1,24 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Doors Script", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
+local Window = OrionLib:MakeWindow({Name = "Doors脚本汉化版作者小云☁️", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
     OrionLib:MakeNotification({
-        Name = "WARNING!",
-        Content = "Do NOT execute Doors in the lobby as it could get you permanently banned!",
+        Name = "警告！",
+        Content = "不要在大厅执行门，因为它可能会让你永久禁止！",
         Time = 30
     })
     return
 end
 
 local time = Window:MakeTab({
-    Name = "Entity Timer",
+    Name = "实体计时器",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
 
 time:AddButton({
-    Name = "Screech Every 15 Secs",
+    Name = "每15秒尖叫一次",
     Callback = function ()
     local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -31,7 +31,7 @@ end
 })
 
 time:AddButton({
-    Name = "Halt Every 15 Secs",
+    Name = "每15秒停止一次",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -43,7 +43,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "Glitch Every 15 Secs",
+    Name = "每15秒出现一次毛刺",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -55,7 +55,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "Heartbeat Minigame Every 15 Secs",
+    Name = "每15秒心跳迷你游戏",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -67,7 +67,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "Timothy Every 15 Secs",
+    Name = "提摩西每15秒",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -80,10 +80,10 @@ time:AddButton({
     end
 })
 
-time:AddParagraph("Bug", "it crashes when i click on spawn rush")
+time:AddParagraph("Bug", "当我点击产卵冲刺时，它崩溃了")
 
 time:AddButton({
-    Name = "Spawn Rush Every 15 Secs",
+    Name = "每15秒产卵一次",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         
@@ -184,13 +184,13 @@ time:AddButton({
 
 
 local customTab = Window:MakeTab({
-    Name = "Custom Entites",
+    Name = "自定义实体",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
 
 customTab:AddButton({
-    Name = "Spawn A-60", 
+    Name = "A-60", 
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -290,7 +290,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "Spawn Firebrand",
+    Name = "产卵火把",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -385,7 +385,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Null",
+    Name = "卵 Null",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -481,7 +481,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "Spawn Rebound",
+    Name = "卵 Rebound",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -577,7 +577,7 @@ customTab:AddButton({
 
 
 customTab:AddButton({
-    Name = "Spawn Angry Munci",
+    Name = "产生愤怒的Munci",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -671,7 +671,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "Spawn BigGames",
+    Name = "产卵大游戏",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -766,7 +766,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "Spawn Bonnie",
+    Name = "产卵邦妮",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -860,7 +860,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Capybara",
+    Name = "产卵水豚",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -954,7 +954,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Chica",
+    Name = "卵 Chica",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1048,7 +1048,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Depth",
+    Name = "卵 Depth",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1143,7 +1143,7 @@ customTab:AddButton({
 })
 
 customTab:AddButton({
-    Name = "Spawn Doge",
+    Name = "产卵狗",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1237,7 +1237,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Eater",
+    Name = "食卵者",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1331,7 +1331,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Elgato",
+    Name = "卵Elgato",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1425,7 +1425,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Flamingo",
+    Name = "繁殖火烈鸟",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1483,7 +1483,7 @@ local entity = Creator.createEntity({
 })
 
 customTab:AddButton({
-    Name = "Spawn Foxy",
+    Name = "产卵福克西",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
