@@ -1,5 +1,5 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Doors汉化小云☁️", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
+local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AnAvaragelilmemer/Orion-mobile/main/source.lua')))()
+local Window = OrionLib:MakeWindow({Name = "DOORS汉化版", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
@@ -10,6 +10,12 @@ if game.PlaceId == 6516141723 then
     })
     return
 end
+
+OrionLib:MakeNotification({
+        Name = "公告",
+        Content = "更新了支持手机",
+        Time = 5
+    })
 
 local time = Window:MakeTab({
     Name = "实体计时器",
