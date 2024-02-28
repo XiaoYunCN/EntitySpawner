@@ -11,12 +11,6 @@ if game.PlaceId == 6516141723 then
     return
 end
 
-OrionLib:MakeNotification({
-        Name = "公告",
-        Content = "更新了支持手机",
-        Time = 5
-    })
-
 local time = Window:MakeTab({
     Name = "实体计时器",
     Icon = "rbxassetid://11372950109",
