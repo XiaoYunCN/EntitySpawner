@@ -1,11 +1,11 @@
 local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AnAvaragelilmemer/Orion-mobile/main/source.lua')))()
-local Window = OrionLib:MakeWindow({Name = "DOORS汉化版", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors Spawn"})
+local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
     OrionLib:MakeNotification({
         Name = "警告！",
-        Content = "不要在大厅执行门，因为它可能会让你永久禁止！",
+        Content = "不要在大厅开门，因为这可能会让你被永久禁止！",
         Time = 30
     })
     return
@@ -43,7 +43,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "每15秒出现一次毛刺",
+    Name = "每15秒出现一次故障",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -55,7 +55,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "每15秒心跳迷你游戏",
+    Name = "每15秒心跳小游戏",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -67,7 +67,7 @@ time:AddButton({
 })
 
 time:AddButton({
-    Name = "提摩西每15秒",
+    Name = "提摩西每15秒一次",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
@@ -80,16 +80,16 @@ time:AddButton({
     end
 })
 
-time:AddParagraph("Bug", "当我点击产卵冲刺时，它崩溃了")
+time:AddParagraph("Bug", "当我点击卵rush时它崩溃了")
 
 time:AddButton({
-    Name = "每15秒产卵一次",
+    Name = "每15秒卵rush一次",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
-        
+
         while true do
             coroutine.wrap(function() local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
-        
+
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
         -- Create entity
@@ -142,55 +142,55 @@ time:AddButton({
                     },
                 },
             },
-            CustomDialog = {"You died to Rush...", "your balls look dry", "Can I put some lotion on them?"}, -- Custom death message
+            CustomDialog = {"你死于Rush...", "你的蛋蛋看起来很干", "我能在他们身上涂些乳液吗？"}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity) end)()
-        
+
     end
     end
 })
 
 
 local customTab = Window:MakeTab({
-    Name = "自定义实体",
+    Name = "定制实体",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
 
 customTab:AddButton({
-    Name = "A-60", 
+    Name = "卵A-60", 
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -244,7 +244,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You died to A-60", "It can Apear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message
+    CustomDialog = {"你死于 A-60", "它随时可能出现，一声尖叫就能说明它的存在", "当你听到它产卵时，你必须尽快远离它", "它知道你在哪里，所以躲在不同的地方是行不通的.."}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -280,17 +280,17 @@ end
 -- Run the created entity
 Creator.runEntity(entity)
 
-    
-    
+
+
     end
-    
-    
-    
+
+
+
     })
 
 
 customTab:AddButton({
-    Name = "产卵火把",
+    Name = "卵Firebrand",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -344,7 +344,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You died to whom you call FireBrand", "FireBrand will spawn only on your will", "When you hear him spawn you only have 2 seconds to hide", "Vents do not save you aswell"}, -- Custom death message
+    CustomDialog = {"你为你呼唤的人而死FireBrand", "FireBrand 只会根据你的意愿繁殖", "当你听到他产卵时，你只有2秒钟的时间躲起来", "通风口也救不了你"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -380,12 +380,12 @@ end
 -- Run the created entity
 Creator.runEntity(entity)
 
-        
+
     end
 })
 
 customTab:AddButton({
-    Name = "卵 Null",
+    Name = "卵Null",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -439,7 +439,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You died to whom you call FireBrand", "FireBrand will spawn only on your will", "When you hear him spawn you only have 2 seconds to hide", "Vents do not save you aswell"}, -- Custom death message
+    CustomDialog = {"你为你称之为煽动者的人而死", "火焰只会在你的意志下产生", "当你听到他产卵时，你只有2秒钟的时间躲起来", "通风口也救不了你"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -475,13 +475,13 @@ end
 -- Run the created entity
 Creator.runEntity(entity)
 
-        
+
     end
 })
 
 
 customTab:AddButton({
-    Name = "卵 Rebound",
+    Name = "卵Rebound",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -537,47 +537,47 @@ customTab:AddButton({
             },
             CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times."}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
-        
+
     end
 })
 
 
 
 customTab:AddButton({
-    Name = "产生愤怒的Munci",
+    Name = "卵Angry Munci",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -631,7 +631,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -671,7 +671,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "产卵大游戏",
+    Name = "卵BigGames",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -725,7 +725,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -766,7 +766,7 @@ Creator.runEntity(entity)
 
 
 customTab:AddButton({
-    Name = "产卵邦妮",
+    Name = "卵Bonnie",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -820,7 +820,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -860,7 +860,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵水豚",
+    Name = "卵Capybara",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -914,7 +914,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -954,7 +954,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "卵 Chica",
+    Name = "卵Chica",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1008,7 +1008,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1048,7 +1048,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "卵 Depth",
+    Name = "卵Depth",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1102,48 +1102,48 @@ customTab:AddButton({
                     },
                 },
             },
-            CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+            CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
-        
-        
+
+
     end
 })
 
 customTab:AddButton({
-    Name = "产卵狗",
+    Name = "卵Doge",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1197,7 +1197,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1237,7 +1237,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "食卵者",
+    Name = "卵Eater",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1291,7 +1291,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1385,7 +1385,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1425,7 +1425,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "繁殖火烈鸟",
+    Name = "卵Flamingo",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1479,11 +1479,11 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 customTab:AddButton({
-    Name = "产卵福克西",
+    Name = "卵Foxy",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1537,7 +1537,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1613,7 +1613,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵弗雷迪·法兹贝尔",
+    Name = "卵Freddy Fazbear",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1667,7 +1667,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1707,7 +1707,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "滋生贪婪",
+    Name = "卵Greed",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1761,7 +1761,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1801,7 +1801,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵贪婪射频",
+    Name = "卵Greed RF",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1855,7 +1855,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1895,7 +1895,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵快乐Muchi",
+    Name = "卵Happy Muchi",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -1949,7 +1949,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -1989,7 +1989,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵呵呵呵",
+    Name = "卵Hehehehaw",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2043,7 +2043,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2083,7 +2083,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Kardin", -- subscribe
+    Name = "卵Kardin", -- subscribe
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2137,7 +2137,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2177,7 +2177,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "卵 LSPLASH",
+    Name = "卵LSPLASH",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2231,7 +2231,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2271,7 +2271,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产生移动的眼睛",
+    Name = "卵Movong Eyes",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2325,7 +2325,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2365,7 +2365,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn Obunga",
+    Name = "卵Obunga",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2419,7 +2419,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2459,7 +2459,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵变老 Ambush",
+    Name = "卵Old Ambush",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2513,7 +2513,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2553,7 +2553,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵橙色",
+    Name = "卵Orange",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2607,7 +2607,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2647,7 +2647,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵彼得格里芬",
+    Name = "卵Peter Griffin",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2701,7 +2701,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2741,7 +2741,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵皮卡丘",
+    Name = "卵Pikachu",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2795,7 +2795,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2835,7 +2835,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵Sanic",
+    Name = "卵Sanic",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2889,7 +2889,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -2929,7 +2929,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "产卵索尔",
+    Name = "卵Saul",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -2983,7 +2983,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -3023,7 +3023,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "繁殖智慧神秘之树",
+    Name = "卵Wise Mystical Tree",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -3077,7 +3077,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -3117,7 +3117,7 @@ Creator.runEntity(entity)
 })
 
 customTab:AddButton({
-    Name = "Spawn plamen6789", -- like
+    Name = "卵plamen6789", -- like
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -3171,7 +3171,7 @@ local entity = Creator.createEntity({
             },
         },
     },
-    CustomDialog = {"You can", "put your", "custom death", "message here."}, -- Custom death message
+    CustomDialog = {"你可以", "把你的", "习俗死亡", "在此留言。"}, -- Custom death message
 })
 
 -----[[ Advanced ]]-----
@@ -3212,29 +3212,29 @@ Creator.runEntity(entity)
 
 
 local everyTab = Window:MakeTab({
-    Name = "实体每扇门",
+    Name = "实体每扇Doors",
     Icon = "rbxassetid://11372950109",
     PremiumOnly = false
 })
 
-everyTab:AddParagraph("Warning!","High performance required!")
+everyTab:AddParagraph("警告！","需要高性能！")
 
 everyTab:AddButton({
-    Name = "尖叫每 Door",
+    Name = "每扇门都尖叫",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(Data)
         end)
-        
+
     end
 })
 
 everyTab:AddButton({
-    Name = "产卵眼间隔 Door",
+    Name = "每扇门上都有眼睛",
     Callback = function ()
-	    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local enableDamage = true
         repenttimes = 0
         local deadeyescrucifix = false
@@ -3243,7 +3243,7 @@ everyTab:AddButton({
         local eyes = game:GetObjects("rbxassetid://11388700077")[1]
         local num = math.floor(#currentLoadedRoom.Nodes:GetChildren() / 2)
         eyes.CFrame = (num == 0 and currentLoadedRoom.Base or currentLoadedRoom.Nodes[num]).CFrame + Vector3.new(0, 7, 0)
-        
+
         eyes.Parent = workspace
         eyes.Initiate:Play()
         task.wait(0.5)
@@ -3252,27 +3252,27 @@ everyTab:AddButton({
         eyes.whisper.Looped = true
         function EyesHell()
         ts = game:GetService("TweenService")
-        
+
         wait(3)
-        
+
         eyes.Scream:Play()
         ts:Create(eyes,TweenInfo.new(5),{CFrame = eyes.CFrame - Vector3.new(0,12,0)}):Play()
         wait(7)
         eyes:Destroy()
         end
         local hum = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-        
+
         local function IsVisible(part)
             local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
             local onscreen = found and vec.Z > 0
             local cfg = RaycastParams.new();
             cfg.FilterType = Enum.RaycastFilterType.Blacklist
             cfg.FilterDescendantsInstances = {part};
-        
+
             local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg);
             return (onscreen and true) and ((cast and cast.Instance).Parent==game.Players.LocalPlayer.Character and true)
         end
-        
+
         while true do
             if workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value] ~= currentLoadedRoom then
                 enableDamage = false
@@ -3307,8 +3307,8 @@ everyTab:AddButton({
                             getconnections(game:GetService("ReplicatedStorage").Bricks.DeathHint.OnClientEvent)[1].Function,
                             1,
                             {
-                                "You died to the Eyes...",
-                                "They don't like to be stared at.",
+                                "你死了Eyes...",
+                                "他们不喜欢被人盯着看。",
                             }
                         )
                     end
@@ -3321,7 +3321,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "杰克走廊每 Door",
+    Name = "Jack走廊每扇门",
     Callback = function ()
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
@@ -3339,7 +3339,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "停止每 Door",
+    Name = "停下每扇门",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3351,7 +3351,7 @@ everyTab:AddButton({
 
 
 everyTab:AddButton({
-    Name = "熄灯时间间隔 Door",
+    Name = "打破每扇门的灯",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3362,9 +3362,9 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "产卵眼间隔 Door",
+    Name = "每扇门上都有眼睛",
     Callback = function ()
-	    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
             local enableDamage = true
         repenttimes = 0
         local deadeyescrucifix = false
@@ -3373,7 +3373,7 @@ everyTab:AddButton({
         local eyes = game:GetObjects("rbxassetid://11388700077")[1]
         local num = math.floor(#currentLoadedRoom.Nodes:GetChildren() / 2)
         eyes.CFrame = (num == 0 and currentLoadedRoom.Base or currentLoadedRoom.Nodes[num]).CFrame + Vector3.new(0, 7, 0)
-        
+
         eyes.Parent = workspace
         eyes.Initiate:Play()
         task.wait(0.5)
@@ -3382,27 +3382,27 @@ everyTab:AddButton({
         eyes.whisper.Looped = true
         function EyesHell()
         ts = game:GetService("TweenService")
-        
+
         wait(3)
-        
+
         eyes.Scream:Play()
         ts:Create(eyes,TweenInfo.new(5),{CFrame = eyes.CFrame - Vector3.new(0,12,0)}):Play()
         wait(7)
         eyes:Destroy()
         end
         local hum = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-        
+
         local function IsVisible(part)
             local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
             local onscreen = found and vec.Z > 0
             local cfg = RaycastParams.new();
             cfg.FilterType = Enum.RaycastFilterType.Blacklist
             cfg.FilterDescendantsInstances = {part};
-        
+
             local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg);
             return (onscreen and true) and ((cast and cast.Instance).Parent==game.Players.LocalPlayer.Character and true)
         end
-        
+
         while true do
             if workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value] ~= currentLoadedRoom then
                 enableDamage = false
@@ -3437,8 +3437,8 @@ everyTab:AddButton({
                             getconnections(game:GetService("ReplicatedStorage").Bricks.DeathHint.OnClientEvent)[1].Function,
                             1,
                             {
-                                "You died to the Eyes...",
-                                "They don't like to be stared at.",
+                                "你死了Eyes...",
+                                "他们不喜欢被人盯着看。",
                             }
                         )
                     end
@@ -3450,7 +3450,7 @@ everyTab:AddButton({
             end,
         })
 everyTab:AddButton({
-    Name = "闪烁灯间隔 Door",
+    Name = "每扇门都闪烁着灯光",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3462,7 +3462,7 @@ everyTab:AddButton({
 
 
 everyTab:AddButton({
-    Name = "寻找眼睛每 Door",
+    Name = "seek每扇门的眼睛",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3473,7 +3473,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "心跳迷你游戏每 Door",
+    Name = "心跳小游戏家家户户",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3484,7 +3484,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "每个红色房间 Door",
+    Name = "每个门都是红色的房间",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3498,7 +3498,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "A-60 每个 Door",
+    Name = "A-60 每个门",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3555,39 +3555,39 @@ everyTab:AddButton({
                     },
                 },
             },
-            CustomDialog = {"You died to A-60", "It can Apear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message
+            CustomDialog = {"你死于 A-60", "它随时可能出现，一声尖叫就能说明它的存在", "当你听到它产卵时，你必须尽快远离它", "它知道你在哪里，所以躲在不同的地方是行不通的.."}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
         end)
@@ -3595,7 +3595,7 @@ everyTab:AddButton({
 })
 
 everyTab:AddButton({
-    Name = "反弹间隔 Door",
+    Name = "反弹每扇门",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
@@ -3652,42 +3652,42 @@ everyTab:AddButton({
                     },
                 },
             },
-            CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times."}, -- Custom death message
+            CustomDialog = {"你为了反弹而死...", "灯光在它的尖叫中闪烁。", "这也很棘手，因为它会反弹。", "你需要躲6次左右。"}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
-        
+
         end)
     end
 })
@@ -3706,13 +3706,13 @@ Tab:AddButton({
     Callback = function ()
         require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
     workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-    
+
     end
 })
 
 
 Tab:AddButton({
-    Name = "卵 Ambush",
+    Name = "卵Ambush",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/Spawner_V2.lua"))()
         local Configuration = {
@@ -3720,13 +3720,13 @@ Tab:AddButton({
             Speed = 160,
             Time = 3 
         }
-        
+
         EntitySpawner:Spawn("Ambush", Configuration)
     end
 })
 
 Tab:AddButton({
-    Name = "产卵伏击[可杀死]",
+    Name = "卵Ambush [可杀死的]",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/Spawner_V2.lua"))()
         local Configuration = {
@@ -3734,23 +3734,23 @@ Tab:AddButton({
             Speed = 160, 
             Time = 3
         }
-        
+
         EntitySpawner:Spawn("Ambush", Configuration)
     end
 })
 
 Tab:AddButton({
-    Name = "卵 Seek",
+    Name = "卵Seek",
     Callback = function ()
         local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/EntitySpawner.lua"))()
         local Configuration = {}
-        
+
         EntitySpawner:Spawn("Seek", unpack(Configuration))    
     end
 })
 
 Tab:AddButton({
-    Name = "卵 Eyes",
+    Name = "卵Eyes",
     Callback = function ()
         local enableDamage = false
         repenttimes = 0
@@ -3760,7 +3760,7 @@ Tab:AddButton({
         local eyes = game:GetObjects("rbxassetid://11488518082")[1]
         local num = math.floor(#currentLoadedRoom.Nodes:GetChildren() / 2)
         eyes.CFrame = (num == 0 and currentLoadedRoom.Base or currentLoadedRoom.Nodes[num]).CFrame + Vector3.new(0, 7, 0)
-        
+
         eyes.Parent = workspace
         eyes.Initiate:Play()
         task.wait(0.5)
@@ -3787,25 +3787,25 @@ Tab:AddButton({
         camShake:Start()
         camShake:ShakeOnce(2,30,5,2)
         wait(3)
-        
+
         eyes.Scream:Play()
         ts:Create(eyes,TweenInfo.new(5),{CFrame = eyes.CFrame - Vector3.new(0,12,0)}):Play()
         wait(7)
         eyes:Destroy()
         end
         local hum = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-        
+
         local function IsVisible(part)
             local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
             local onscreen = found and vec.Z > 0
             local cfg = RaycastParams.new();
             cfg.FilterType = Enum.RaycastFilterType.Blacklist
             cfg.FilterDescendantsInstances = {part};
-        
+
             local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg);
             return (onscreen and true) and ((cast and cast.Instance).Parent==game.Players.LocalPlayer.Character and true)
         end
-        
+
         while true do
             if workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value] ~= currentLoadedRoom then
                 enableDamage = false
@@ -3827,7 +3827,7 @@ Tab:AddButton({
         camara.CFrame = camara.CFrame * shakeCf
         end)
         camShake:Start()
-        
+
         camShake:ShakeOnce(5,50,0.7,0.2)
                 wait(0.7)
                 repenttimes = repenttimes + 1
@@ -3858,14 +3858,14 @@ Tab:AddButton({
             end
             task.wait(0.2)
         end
-        
-                       
+
+
     end
 })
 
 
 Tab:AddButton({
-    Name = "产卵眼[可杀死]",
+    Name = "卵Eyes [可杀死的]",
     Callback = function ()
         local enableDamage = true
         repenttimes = 0
@@ -3875,7 +3875,7 @@ Tab:AddButton({
         local eyes = game:GetObjects("rbxassetid://11488518082")[1]
         local num = math.floor(#currentLoadedRoom.Nodes:GetChildren() / 2)
         eyes.CFrame = (num == 0 and currentLoadedRoom.Base or currentLoadedRoom.Nodes[num]).CFrame + Vector3.new(0, 7, 0)
-        
+
         eyes.Parent = workspace
         eyes.Initiate:Play()
         task.wait(0.5)
@@ -3902,25 +3902,25 @@ Tab:AddButton({
         camShake:Start()
         camShake:ShakeOnce(2,30,5,2)
         wait(3)
-        
+
         eyes.Scream:Play()
         ts:Create(eyes,TweenInfo.new(5),{CFrame = eyes.CFrame - Vector3.new(0,12,0)}):Play()
         wait(7)
         eyes:Destroy()
         end
         local hum = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-        
+
         local function IsVisible(part)
             local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
             local onscreen = found and vec.Z > 0
             local cfg = RaycastParams.new();
             cfg.FilterType = Enum.RaycastFilterType.Blacklist
             cfg.FilterDescendantsInstances = {part};
-        
+
             local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg);
             return (onscreen and true) and ((cast and cast.Instance).Parent==game.Players.LocalPlayer.Character and true)
         end
-        
+
         while true do
             if workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value] ~= currentLoadedRoom then
                 enableDamage = false
@@ -3942,7 +3942,7 @@ Tab:AddButton({
         camara.CFrame = camara.CFrame * shakeCf
         end)
         camShake:Start()
-        
+
         camShake:ShakeOnce(5,50,0.7,0.2)
                 wait(0.7)
                 repenttimes = repenttimes + 1
@@ -3964,8 +3964,8 @@ Tab:AddButton({
                             getconnections(game:GetService("ReplicatedStorage").Bricks.DeathHint.OnClientEvent)[1].Function,
                             1,
                             {
-                                "You died to the Eyes...",
-                                "They don't like to be stared at.",
+                                "你看上去死了...",
+                                "他们不喜欢被人盯着看。",
                             }
                         )
                     end
@@ -3973,33 +3973,33 @@ Tab:AddButton({
             end
             task.wait(0.2)
         end
-        
-                       
+
+
     end
 })
 
 
 
 Tab:AddButton({
-    Name = "产卵停止",
+    Name = "卵Halt",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
-    
+
     end
 })
 
 Tab:AddButton({
-    Name = "产生毛刺",
+    Name = "卵Glitch",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
-    
+
     end
 })
 
 Tab:AddButton({
-    Name = "产卵高峰",
+    Name = "卵Rush",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -4055,47 +4055,47 @@ Tab:AddButton({
             },
             CustomDialog = {"You died to Rush...", "your balls look dry", "Can I put some lotion on them?"}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
-        
+
     end
 })
 
 
 
 Tab:AddButton({
-    Name = "产卵拉什[可杀死]",
+    Name = "卵Rush [可杀死的]",
     Callback = function ()
         local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
@@ -4151,40 +4151,40 @@ Tab:AddButton({
             },
             CustomDialog = {"You died to Rush...", "your balls look dry", "Can I put some lotion on them?"}, -- Custom death message
         })
-        
+
         -----[[ Advanced ]]-----
         entity.Debug.OnEntitySpawned = function(entityTable)
             print("Entity has spawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityDespawned = function(entityTable)
             print("Entity has despawned:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityStartMoving = function(entityTable)
             print("Entity has started moving:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityFinishedRebound = function(entityTable)
             print("Entity has finished rebound:", entityTable.Model)
         end
-        
+
         entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
             print("Entity:", entityTable.Model, "has entered room:", room)
         end
-        
+
         entity.Debug.OnLookAtEntity = function(entityTable)
             print("Player has looked at entity:", entityTable.Model)
         end
-        
+
         entity.Debug.OnDeath = function(entityTable)
             warn("Player has died.")
         end
         ------------------------
-        
+
         -- Run the created entity
         Creator.runEntity(entity)
-        
+
     end
 })
 
@@ -4199,7 +4199,7 @@ itemsTab:AddParagraph("警告！","仅适用于由脚本生成的实体！")
 itemsTab:AddButton({
     Name = "给十字架",
     Callback = function ()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/Utilities-1/main/Crucifix"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/Utilities-1/main/Crucifix"))()
         end
 })
 
@@ -4208,38 +4208,38 @@ itemsTab:AddButton({
     Callback = function ()
         function skelly()
             local DoorReplication = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Door%20Replication/Source.lua"))()
-        
-        
+
+
         -- Get current room
         local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
-        
-        
+
+
         -- Replicate door
         local replicatedDoor = DoorReplication.ReplicateDoor(room, {
             CustomKeyName = "Skeleton Key",
             DestroyKey = false,
         })
-        
-        
+
+
         -- Debug features [advanced]
         replicatedDoor.Debug.OnDoorOpened = function(doorTable)
             warn("Door", doorTable.Model, "has opened")
         end
         end
         local DoorReplication = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Door%20Replication/Source.lua"))()
-        
-        
+
+
         -- Get current room
         local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
-        
-        
+
+
         -- Replicate door
         local replicatedDoor = DoorReplication.ReplicateDoor(room, {
             CustomKeyName = "Skeleton Key",
             DestroyKey = false,
         })
-        
-        
+
+
         -- Debug features [advanced]
         replicatedDoor.Debug.OnDoorOpened = function(doorTable)
             warn("Door", doorTable.Model, "has opened")
@@ -4251,7 +4251,7 @@ itemsTab:AddButton({
         anim.AnimationId = 'https://www.roblox.com/Assest?ID=6525854363'
         anim2.AnimationId = 'https://www.roblox.com/Assest?ID=10526835827'
         local track
-         
+
         shadow.Equipped:Connect(function()
             track = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim) 
                 track.Priority = Enum.AnimationPriority.Action
@@ -4262,9 +4262,9 @@ itemsTab:AddButton({
                 track2.Priority = Enum.AnimationPriority.Action
                 track2:Play()
                 track2.Looped = false
-         
+
         end)
-         
+
         shadow.Unequipped:Connect(function()
             if track then
                 track:Stop()
@@ -4283,21 +4283,21 @@ itemsTab:AddButton({
 })
 
 itemsTab:AddButton({
-    Name = "crucifix itemshop",
+    Name = "十字架itemshop",
     Callback = function ()
     --// Crucifix (Execute in prerun shop)
 function FullVersion() do
     local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
     local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
-    
-    
+
+
     -- Create your tool here
     local exampleTool = game:GetObjects("rbxassetid://11556599019")[1]
-    
+
     -- Create custom shop item
     CustomShop.CreateItem(exampleTool, {
-        Title = "Crucifix",
-        Desc = "Single use, blocks most attacks",
+        Title = "十字架",
+        Desc = "一次性使用，阻止大多数攻击",
         Image = "https://static.wikia.nocookie.net/doors-game/images/8/88/Icon_crucifix2.png/revision/latest?cb=20220728033038",
         Price = 200,
         Stack = 1,
@@ -4315,7 +4315,7 @@ function FullVersion() do
             local function setupCrucifix(tool)
             RightArm.Name = "R_Arm"
             LeftArm.Name = "L_Arm"
-           
+
             RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
             LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
             for _, v in next, Hum:GetPlayingAnimationTracks() do
@@ -4342,7 +4342,7 @@ function FullVersion() do
     camara.CFrame = camara.CFrame * shakeCf
     end)
     camShake:Start()
-    
+
     camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
     wait(1.2)
                           local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
@@ -4351,7 +4351,7 @@ function FullVersion() do
     camara.CFrame = camara.CFrame * shakeCf
     end)
     camShake:Start()
-    
+
     camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
     wait(1.2)
     local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
@@ -4360,7 +4360,7 @@ function FullVersion() do
     camara.CFrame = camara.CFrame * shakeCf
     end)
     camShake:Start()
-    
+
     camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
     wait(1.2)
     local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
@@ -4369,7 +4369,7 @@ function FullVersion() do
     camara.CFrame = camara.CFrame * shakeCf
     end)
     camShake:Start()
-    
+
     camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
                           wait(1.2)
                           local ClonedMesh = tool.NewOneBro:Clone()
@@ -4386,7 +4386,7 @@ function FullVersion() do
     camara.CFrame = camara.CFrame * shakeCf
     end)
     camShake:Start()
-    
+
     camShake:ShakeOnce(6, 10, 0.1, 4.5)
                           loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
                           wait(0.3)
@@ -4400,33 +4400,33 @@ function FullVersion() do
         game.Players.LocalPlayer:SetAttribute("Hidden", false)
             RightArm.Name = "RightUpperArm"
             LeftArm.Name = "LeftUpperArm"
-           
+
             RightArm.RightShoulder.C1 = RightC1
             LeftArm.LeftShoulder.C1 = LeftC1
     end)
-    
+
     local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
     local Achievements = debug.getupvalue(Unlock, 1)
-    
+
     local custom = {
         Title = "打开十字架",
         Desc = "你怎么..",  --first line
-        Reason = "以某种方式..你得到了十字架..", --change this for second line of the badgs desc
+        Reason = "以某种方式..你拿到了十字架..", --change this for second line of the badgs desc
         BadgeId = 2127965910, --change badge id for image
         Category = 0,
     }
-    
+
     local old = {}
     for i, v in next, Achievements.Join do
         old[i] = v
     end
-    
+
     for i, v in next, custom do
         Achievements.Join[i] = v
     end
-    
+
     Unlock(nil, "Join")
-    
+
     for i, v in next, old do
         Achievements.Join[i] = v
     end
@@ -4437,12 +4437,12 @@ function FullVersion() do
 })
 
 itemsTab:AddButton({
-    Name = "给枪Lel",
+    Name = "把枪给勒尔",
     Callback = function ()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
     end
 })
-				
+
 itemsTab:AddButton({
     Name = "给M4A1 Lel",
     Callback = function ()
@@ -4451,7 +4451,7 @@ itemsTab:AddButton({
 })
 
 local PlayerTab = Window:MakeTab({
-    Name = "玩家",
+    Name = "主要的",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -4459,7 +4459,7 @@ local PlayerTab = Window:MakeTab({
 local FullHealth = 100
 
 PlayerTab:AddButton({
-    Name = "100 HP",
+    Name = "100血量",
     Callback = function ()
         FullHealth = 100
         game.Players.LocalPlayer.Character.Humanoid.Health = FullHealth
@@ -4467,18 +4467,18 @@ PlayerTab:AddButton({
     end
 })
 
-Tab:AddTextbox({
-
-	Name = "移动速度设置",	Default = "",
-
-	TextDisappear = true,
-
-	Callback = function(Value)
-
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-
-	end
-
+PlayerTab:AddSlider({
+    Name = "速度",
+    Min = 0, 
+    Max = 200,
+    Increment = 1,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    CurrentValue = 5,
+    ValueName = "",
+    Callback = function(Value)
+        TargetWalkspeed = Value
+    end
 })
 
 
@@ -4492,8 +4492,8 @@ pcl.Enabled = false
 
 
 PlayerTab:AddToggle({
-	Name = "前灯",
-	Default = false,
+        Name = "前灯",
+        Default = false,
     Callback = function(Value)
         pcl.Enabled = Value
     end
@@ -4522,15 +4522,15 @@ local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 
 local KeyChams = {}
 VisualsTab:AddToggle({
-	Name = "Key Chams",
-	Default = false,
+        Name = "Key Chams",
+        Default = false,
     Flag = "KeyToggle",
     Save = true,
-	Callback = function(Value)
-		for i,v in pairs(KeyChams) do
+        Callback = function(Value)
+                for i,v in pairs(KeyChams) do
             v.Enabled = Value
         end
-	end    
+        end    
 })
 
 local function ApplyKeyChams(inst)
@@ -4563,21 +4563,21 @@ coroutine.resume(KeyCoroutine)
 
 local BookChams = {}
 VisualsTab:AddToggle({
-	Name = "书店",
-	Default = false,
+        Name = "Book Chams",
+        Default = false,
     Flag = "BookToggle",
     Save = true,
-	Callback = function(Value)
-		for i,v in pairs(BookChams) do
+        Callback = function(Value)
+                for i,v in pairs(BookChams) do
             v.Enabled = Value
         end
-	end    
+        end    
 })
 
 local FigureChams = {}
 VisualsTab:AddToggle({
-	Name = "数字通道",
-	Default = false,
+        Name = "Figure Chams",
+        Default = false,
     Flag = "FigureToggle",
     Save = true,
     Callback = function(Value)
@@ -4632,20 +4632,20 @@ local EntityCoroutine = coroutine.create(function()
 end)
 
 local GameTab = Window:MakeTab({
-    Name = "比赛",
+    Name = "游戏",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 GameTab:AddToggle({
-	Name = "即时互动",
-	Default = false,
+        Name = "即时互动",
+        Default = false,
     Flag = "InstantToggle",
     Save = true
 })
 GameTab:AddButton({
-	Name = "跳 Door",
-	Callback = function()
+        Name = "跳过门",
+        Callback = function()
         pcall(function()
             local HasKey = false
             local CurrentDoor = workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door")
@@ -4669,12 +4669,12 @@ GameTab:AddButton({
             wait(0.3)
             CurrentDoor.ClientOpen:FireServer()
         end)
-  	end    
+          end    
 })
 
 GameTab:AddToggle({
-	Name = "自动跳过 door",
-	Default = false,
+        Name = "自动跳门",
+        Default = false,
     Save = false,
     Flag = "AutoSkip"
 })
@@ -4713,57 +4713,57 @@ end)
 coroutine.resume(AutoSkipCoro)
 
 GameTab:AddButton({
-	Name = "没有惊吓",
-	Callback = function()
+        Name = "没有惊吓",
+        Callback = function()
         pcall(function()
             game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
         end)
-  	end    
+          end    
 })
 GameTab:AddToggle({
-	Name = "避免匆忙/伏击",
-	Default = false,
+        Name = "避免 Rush/Ambush",
+        Default = false,
     Flag = "AvoidRushToggle",
     Save = true
 })
 GameTab:AddToggle({
-	Name = "没有尖叫",
-	Default = false,
+        Name = "没有尖叫",
+        Default = false,
     Flag = "ScreechToggle",
     Save = true
 })
 
 GameTab:AddToggle({
-	Name = "永远赢得心跳",
-	Default = false,
+        Name = "总是赢得心跳",
+        Default = false,
     Flag = "HeartbeatWin",
     Save = true
 })
 
 GameTab:AddToggle({
-	Name = "预测追逐",
-	Default = false,
+        Name = "预测追逐",
+        Default = false,
     Flag = "PredictToggle" ,
     Save = true
 })
 GameTab:AddToggle({
-	Name = "当怪物出现时通知",
-	Default = false,
+        Name = "当怪物出现时通知",
+        Default = false,
     Flag = "MobToggle" ,
     Save = true
 })
 GameTab:AddButton({
-	Name = "完整的断路器盒迷你游戏",
-	Callback = function()
+        Name = "完整的断路器盒小游戏",
+        Callback = function()
         game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
-  	end    
+          end    
 })
 GameTab:AddButton({
-	Name = "跳 Door 50",
-	Callback = function()
+        Name = "跳过门50",
+        Callback = function()
         local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
         game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
-  	end    
+          end    
 })
 
 
@@ -4796,7 +4796,7 @@ local old
 old = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
     local args = {...}
     local method = getnamecallmethod()
-    
+
     if tostring(self) == 'Screech' and method == "FireServer" and OrionLib.Flags["ScreechToggle"].Value == true then
         args[1] = true
         return old(self,unpack(args))
@@ -4805,7 +4805,7 @@ old = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
         args[2] = true
         return old(self,unpack(args)).infiniteyield
     end
-    
+
     return old(self,...)
 end))
 
@@ -4821,8 +4821,8 @@ local NotificationCoroutine = coroutine.create(function()
             local n = ChaseStart.Value - LatestRoom.Value
             if 0 < n and n < 4 then
                 OrionLib:MakeNotification({
-                    Name = "Warning!",
-                    Content = "Event in " .. tostring(n) .. " rooms.",
+                    Name = "警告！",
+                    Content = "事件发生在" .. tostring(n) .. "房间。",
                     Time = 5
                 })
             end
@@ -4842,46 +4842,46 @@ local NotificationCoroutine = coroutine.create(function()
         if inst.Name == "RushMoving" and OrionLib.Flags["MobToggle"].Value == true then
             if OrionLib.Flags["AvoidRushToggle"].Value == true then
                 OrionLib:MakeNotification({
-                    Name = "Warning!",
-                    Content = "Avoiding Rush. Please wait.",
+                    Name = "警告！",
+                    Content = "避免Rush。请稍等。",
                     Time = 5
                 })
                 local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
                 local con = game:GetService("RunService").Heartbeat:Connect(function()
                     game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
                 end)
-                
+
                 inst.Destroying:Wait()
                 con:Disconnect()
 
                 game.Players.LocalPlayer.Character:MoveTo(OldPos)
             else
                 OrionLib:MakeNotification({
-                    Name = "Warning!",
-                    Content = "Rush has spawned, hide!",
+                    Name = "警告!",
+                    Content = "Rush已经繁殖了，藏起来！",
                     Time = 5
                 })
             end
         elseif inst.Name == "AmbushMoving" and OrionLib.Flags["MobToggle"].Value == true then
             if OrionLib.Flags["AvoidRushToggle"].Value == true then
                 OrionLib:MakeNotification({
-                    Name = "Warning!",
-                    Content = "Avoiding Ambush. Please wait.",
+                    Name = "警告!",
+                    Content = "躲避Ambush。请稍等。",
                     Time = 5
                 })
                 local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
                 local con = game:GetService("RunService").Heartbeat:Connect(function()
                     game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
                 end)
-                
+
                 inst.Destroying:Wait()
                 con:Disconnect()
-                
+
                 game.Players.LocalPlayer.Character:MoveTo(OldPos)
             else
                 OrionLib:MakeNotification({
-                    Name = "Warning!",
-                    Content = "Ambush has spawned, hide!",
+                    Name = "警告！",
+                    Content = "Ambush已经繁殖了，藏起来！",
                     Time = 5
                 })
             end
@@ -4896,7 +4896,7 @@ local ExtraTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-ExtraTab:AddParagraph("Warning!","these scripts are not mine!")
+ExtraTab:AddParagraph("警告！","这些剧本不是我的！")
 
 ExtraTab:AddButton({
     Name = "打破灯",
@@ -4908,7 +4908,7 @@ ExtraTab:AddButton({
 
 
 ExtraTab:AddButton({
-    Name = "闪烁灯",
+    Name = "闪烁的灯光",
     Callback = function ()
         local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
         firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "flickerLights", game.ReplicatedStorage.GameData.LatestRoom.Value, 1) 
@@ -4947,7 +4947,7 @@ ExtraTab:AddButton({
     Name = "无限产量",
     Callback = function ()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source')))()
-        
+
     end
 })
 
@@ -5083,8 +5083,8 @@ camShake:ShakeOnce(5,50,0.7,0.2)
                  getconnections(game:GetService("ReplicatedStorage").Bricks.DeathHint.OnClientEvent)[1].Function,
                  1,
                  {
-                     "You died to the Eyes...",
-                     "They don't like to be stared at.",
+                     "你死了Eyes...",
+                     "他们不喜欢被人盯着看。",
                  }
              )
          end
@@ -5104,14 +5104,21 @@ ExtraTab:AddButton({
 })
 
 local InfoTab = Window:MakeTab({
-    Name = "Info",
+    Name = "信息",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-InfoTab:AddParagraph("如何与我联系","我的不和:呃，我的机器人账号:妈妈")
-InfoTab:AddParagraph("Changelog","")
-InfoTab:AddParagraph("30.11.2022","1.一切的按键绑定。2.删除功能产卵100尖叫3。演职员表已删除4。更新日志重命名为信息5。额外的一些变化。6.新增功能产卵伏击，寻找。")
-InfoTab:AddParagraph("Soon...","这个脚本会把库从OrionLib改成RayField(因为已经过时了)，一周之内我会重拍这个脚本！！")
-InfoTab:AddParagraph("Bugs","1.万能钥匙目前不存在。你的速度快得无法控制，很难走出壁橱")
-InfoTab:AddParagraph("关于","hebecause thee area lot fuom entites")
+InfoTab:AddParagraph("翻译家：小云","感谢您支持Doors脚本")
+InfoTab:AddParagraph("推荐Doors脚本","↓↓↓↓↓")
+lofoTab:AddButton({
+    Name = "Doors最强汉化[BobHub]",
+    Callback = function ()      loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
+    end
+})
+lofoTab:AddButton({
+    Name = "微山Doors",
+    Callback = function () 
+    loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
+    end
+})
 OrionLib:Init()
