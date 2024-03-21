@@ -1,29 +1,19 @@
-local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AnAvaragelilmemer/Orion-mobile/main/source.lua')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
+local TargetWalkspeed = 0
 OrionLib:MakeNotification({
-	Name = "正在Doors启动",
-	Content = "成功执行你的注入器",
+	Name = "小云制作",
+	Content = "2023年5月1号做了Doors汉化",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
-local TargetWalkspeed = 0
-
-if game.PlaceId == 6516141723 then
-    OrionLib:MakeNotification({
-        Name = "警告！",
-        Content = "不要在大厅开门，因为这可能会让你被永久禁止！",
-        Time = 30
-    })
-    return
-end
-
+wait(1)
 OrionLib:MakeNotification({
 	Name = "小云制作",
-	Content = "2023年5月1号做了Doors汉化：（",
+	Content = "2023年7月后Doors用不了，有点bug",
 	Image = "rbxassetid://4483345998",
-	Time = 10
+	Time = 7.5
 })
-wait(0.1)
 local time = Window:MakeTab({
     Name = "实体计时器",
     Icon = "rbxassetid://11372950109",
@@ -42,6 +32,7 @@ end
 
 end
 })
+
 
 time:AddButton({
     Name = "每15秒停止一次",
@@ -4535,7 +4526,7 @@ local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 
 local KeyChams = {}
 VisualsTab:AddToggle({
-        Name = "Key Chams",
+        Name = "获得密钥",
         Default = false,
     Flag = "KeyToggle",
     Save = true,
@@ -4576,7 +4567,7 @@ coroutine.resume(KeyCoroutine)
 
 local BookChams = {}
 VisualsTab:AddToggle({
-        Name = "Book Chams",
+        Name = "获得书",
         Default = false,
     Flag = "BookToggle",
     Save = true,
@@ -4589,7 +4580,7 @@ VisualsTab:AddToggle({
 
 local FigureChams = {}
 VisualsTab:AddToggle({
-        Name = "Figure Chams",
+        Name = "获得数字",
         Default = false,
     Flag = "FigureToggle",
     Save = true,
@@ -5123,12 +5114,12 @@ local InfoTab = Window:MakeTab({
 })
 InfoTab:AddParagraph("翻译家：小云","感谢您支持Doors脚本")
 InfoTab:AddParagraph("推荐Doors脚本","↓↓↓↓↓")
-lofoTab:AddButton({
+lnfoTab:AddButton({
     Name = "Doors最强汉化[BobHub]",
     Callback = function ()      loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
     end
 })
-lofoTab:AddButton({
+lnfoTab:AddButton({
     Name = "微山Doors",
     Callback = function () 
     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
