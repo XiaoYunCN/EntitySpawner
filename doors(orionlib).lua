@@ -1,5 +1,11 @@
 local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AnAvaragelilmemer/Orion-mobile/main/source.lua')))()
-local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
+OrionLib:MakeNotification({
+	Name = "正在Doors启动",
+	Content = "成功执行你的注入器",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+local Window = OrionLib:MakeWindow({Name = "Doors多耳屎", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
@@ -11,6 +17,13 @@ if game.PlaceId == 6516141723 then
     return
 end
 
+OrionLib:MakeNotification({
+	Name = "小云制作",
+	Content = "2023年5月1号做了Doors汉化：（",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+wait(0.1)
 local time = Window:MakeTab({
     Name = "实体计时器",
     Icon = "rbxassetid://11372950109",
