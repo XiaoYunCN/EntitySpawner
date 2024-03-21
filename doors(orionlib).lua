@@ -5,7 +5,7 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-local Window = OrionLib:MakeWindow({Name = "Doors多耳屎", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
+local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
 local TargetWalkspeed = 0
 
 if game.PlaceId == 6516141723 then
