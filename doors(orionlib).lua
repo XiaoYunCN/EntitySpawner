@@ -2,17 +2,17 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
 local TargetWalkspeed = 0
 OrionLib:MakeNotification({
-	Name = "小云制作",
-	Content = "2023年5月1号做了Doors汉化",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+        Name = "小云制作",
+        Content = "2023年5月1号做了Doors汉化",
+        Image = "rbxassetid://4483345998",
+        Time = 5
 })
 wait(1)
 OrionLib:MakeNotification({
-	Name = "小云制作",
-	Content = "2023年7月后Doors用不了，有点bug",
-	Image = "rbxassetid://4483345998",
-	Time = 7.5
+        Name = "小云制作",
+        Content = "2023年7月后Doors用不了，有点bug",
+        Image = "rbxassetid://4483345998",
+        Time = 7.5
 })
 local time = Window:MakeTab({
     Name = "实体计时器",
@@ -4502,138 +4502,6 @@ PlayerTab:AddToggle({
         pcl.Enabled = Value
     end
 })
-local VisualsTab = Window:MakeTab({
-    Name = "画面",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-VisualsTab:AddButton({
-    Name = "获得所有成就",
-    Callback = function ()
-        local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
-        for i,v in pairs(require(game.ReplicatedStorage.Achievements)) do
-            spawn(function()
-                require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.AchievementUnlock)(nil, i)
-            end)
-        end
-    end
-})
-
-local CF = CFrame.new
-local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
-local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
-
-local KeyChams = {}
-VisualsTab:AddToggle({
-        Name = "获得密钥",
-        Default = false,
-    Flag = "KeyToggle",
-    Save = true,
-        Callback = function(Value)
-                for i,v in pairs(KeyChams) do
-            v.Enabled = Value
-        end
-        end    
-})
-
-local function ApplyKeyChams(inst)
-    wait()
-    local Cham = Instance.new("Highlight")
-    Cham.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-    Cham.FillColor = Color3.new(0.980392, 0.670588, 0)
-    Cham.FillTransparency = 0.5
-    Cham.OutlineColor = Color3.new(0.792156, 0.792156, 0.792156)
-    Cham.Parent = game:GetService("CoreGui")
-    Cham.Adornee = inst
-    Cham.Enabled = OrionLib.Flags["KeyToggle"].Value
-    Cham.RobloxLocked = true
-    return Cham
-end
-
-local KeyCoroutine = coroutine.create(function()
-    workspace.CurrentRooms.DescendantAdded:Connect(function(inst)
-        if inst.Name == "KeyObtain" then
-            table.insert(KeyChams,ApplyKeyChams(inst))
-        end
-    end)
-end)
-for i,v in ipairs(workspace:GetDescendants()) do
-    if v.Name == "KeyObtain" then
-        table.insert(KeyChams,ApplyKeyChams(v))
-    end
-end
-coroutine.resume(KeyCoroutine)
-
-local BookChams = {}
-VisualsTab:AddToggle({
-        Name = "获得书",
-        Default = false,
-    Flag = "BookToggle",
-    Save = true,
-        Callback = function(Value)
-                for i,v in pairs(BookChams) do
-            v.Enabled = Value
-        end
-        end    
-})
-
-local FigureChams = {}
-VisualsTab:AddToggle({
-        Name = "获得数字",
-        Default = false,
-    Flag = "FigureToggle",
-    Save = true,
-    Callback = function(Value)
-        for i,v in pairs(FigureChams) do
-            v.Enabled = Value
-        end
-    end
-})
-
-local function ApplyBookChams(inst)
-    if inst:IsDescendantOf(game:GetService("Workspace").CurrentRooms:FindFirstChild("50")) and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value == 50 then
-        wait()
-        local Cham = Instance.new("Highlight")
-        Cham.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-        Cham.FillColor = Color3.new(0, 1, 0.749019)
-        Cham.FillTransparency = 0.5
-        Cham.OutlineColor = Color3.new(0.792156, 0.792156, 0.792156)
-        Cham.Parent = game:GetService("CoreGui")
-        Cham.Enabled = OrionLib.Flags["BookToggle"].Value
-        Cham.Adornee = inst
-        Cham.RobloxLocked = true
-        return Cham
-    end
-end
-
-local function ApplyEntityChams(inst)
-    wait()
-    local Cham = Instance.new("Highlight")
-    Cham.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-    Cham.FillColor = Color3.new(1, 0, 0)
-    Cham.FillTransparency = 0.5
-    Cham.OutlineColor = Color3.new(0.792156, 0.792156, 0.792156)
-    Cham.Parent = game:GetService("CoreGui")
-    Cham.Enabled = OrionLib.Flags["FigureToggle"].Value
-    Cham.Adornee = inst
-    Cham.RobloxLocked = true
-    return Cham
-end
-
-local BookCoroutine = coroutine.create(function()
-    task.wait(1)
-    for i,v in pairs(game:GetService("Workspace").CurrentRooms["50"].Assets:GetDescendants()) do
-        if v.Name == "LiveHintBook" then
-            table.insert(BookChams,ApplyBookChams(v))
-        end
-    end
-end)
-local EntityCoroutine = coroutine.create(function()
-    local Entity = game:GetService("Workspace").CurrentRooms["50"].FigureSetup:WaitForChild("FigureRagdoll",5)
-    Entity:WaitForChild("Torso",2.5)
-    table.insert(FigureChams,ApplyEntityChams(Entity))
-end)
 
 local GameTab = Window:MakeTab({
     Name = "游戏",
@@ -5113,16 +4981,5 @@ local InfoTab = Window:MakeTab({
     PremiumOnly = false
 })
 InfoTab:AddParagraph("翻译家：小云","感谢您支持Doors脚本")
-InfoTab:AddParagraph("推荐Doors脚本","↓↓↓↓↓")
-lnfoTab:AddButton({
-    Name = "Doors最强汉化[BobHub]",
-    Callback = function ()      loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
-    end
-})
-lnfoTab:AddButton({
-    Name = "微山Doors",
-    Callback = function () 
-    loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
-    end
-})
+
 OrionLib:Init()
