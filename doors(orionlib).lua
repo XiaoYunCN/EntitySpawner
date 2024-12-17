@@ -1,19 +1,13 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/Orion.lua", true))()
 local Window = OrionLib:MakeWindow({Name = "Doors脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "Doors "})
 local TargetWalkspeed = 0
 OrionLib:MakeNotification({
-        Name = "小云制作",
-        Content = "2023年5月1号做了Doors汉化",
+        Name = "云脚本提示",
+        Content = "2023年5月1日Doors脚本已汉化",
         Image = "rbxassetid://4483345998",
         Time = 5
 })
-wait(1)
-OrionLib:MakeNotification({
-        Name = "小云制作",
-        Content = "2023年7月后Doors用不了，有点bug",
-        Image = "rbxassetid://4483345998",
-        Time = 7.5
-})
+
 local time = Window:MakeTab({
     Name = "实体计时器",
     Icon = "rbxassetid://11372950109",
